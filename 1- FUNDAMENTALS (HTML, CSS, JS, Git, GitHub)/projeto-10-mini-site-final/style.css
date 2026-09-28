@@ -220,6 +220,9 @@ body {
 }
 
 .card-projeto {
+    display: block; /* NOVO: faz o link se comportar como bloco, igual o article antigo */
+    text-decoration: none; /* NOVO: remove o sublinhado padrão do link */
+    color: inherit; /* NOVO: remove a cor azul padrão do link */
     background-color: #fff; /* Fundo branco do card */
     border-radius: 12px; /* Bordas arredondadas */
     overflow: hidden; /* Esconde partes da imagem que ultrapassem as bordas arredondadas */
