@@ -1,0 +1,98 @@
+/* Seleciona TODOS os elementos da página para aplicar um reset básico */
+* {
+    margin: 0; /* Remove a margem padrão que os navegadores colocam nos elementos */
+    padding: 0; /* Remove o espaçamento interno padrão */
+    box-sizing: border-box; /* Faz o padding e a borda contarem dentro da largura/altura do elemento */
+}
+
+/* Estiliza o corpo (fundo) da página inteira */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte usada no texto de toda a página */
+    background-color: #f0f2f5; /* Cor de fundo cinza claro atrás do cartão */
+    display: flex; /* Ativa o modo flexbox para poder centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo na horizontal */
+    align-items: center; /* Centraliza o conteúdo na vertical */
+    min-height: 100vh; /* Faz o body ter no mínimo a altura total da tela (100% da viewport) */
+    padding: 20px; /* Espaço para o cartão não colar nas bordas em telas pequenas */
+}
+
+/* Estiliza a caixa (div) que contém todo o cartão de perfil */
+.cartao {
+    background-color: #ffffff; /* Cor de fundo branca do cartão */
+    border-radius: 12px; /* Arredonda as bordas do cartão */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor do cartão */
+    padding: 30px; /* Espaço interno entre o conteúdo e a borda do cartão */
+    max-width: 350px; /* Largura máxima do cartão, evita que fique gigante em telas grandes */
+    text-align: center; /* Centraliza todo o texto dentro do cartão */
+}
+
+/* Estiliza a imagem de perfil */
+.foto-perfil {
+    width: 120px; /* Define a largura da imagem */
+    height: 120px; /* Define a altura da imagem (igual à largura para ficar redonda) */
+    border-radius: 50%; /* Deixa a imagem com formato circular */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    border: 4px solid #4a90e2; /* Adiciona uma borda azul ao redor da foto */
+    margin-bottom: 15px; /* Espaço abaixo da imagem, separando do nome */
+}
+
+/* Estiliza o nome da pessoa (h1) */
+.nome {
+    font-size: 22px; /* Tamanho da fonte do nome */
+    color: #222; /* Cor quase preta do texto */
+    margin-bottom: 5px; /* Espaço abaixo do nome */
+}
+
+/* Estiliza o cargo/subtítulo abaixo do nome */
+.cargo {
+    font-size: 14px; /* Tamanho menor de fonte, por ser um subtítulo */
+    color: #4a90e2; /* Cor azul para destacar o cargo */
+    margin-bottom: 15px; /* Espaço abaixo do cargo */
+}
+
+/* Estiliza o parágrafo de biografia */
+.bio {
+    font-size: 14px; /* Tamanho da fonte do texto da bio */
+    color: #555; /* Cor cinza escuro, mais suave que preto puro */
+    line-height: 1.5; /* Espaçamento entre as linhas do texto, melhora a leitura */
+    margin-bottom: 20px; /* Espaço abaixo da bio */
+}
+
+/* Estiliza a lista de interesses */
+.lista-interesses {
+    list-style: none; /* Remove os pontinhos padrão da lista */
+    margin-bottom: 20px; /* Espaço abaixo da lista inteira */
+}
+
+/* Estiliza cada item dentro da lista de interesses */
+.lista-interesses li {
+    font-size: 13px; /* Tamanho da fonte de cada item */
+    color: #444; /* Cor do texto de cada item */
+    background-color: #f0f2f5; /* Fundo levemente cinza para destacar cada item */
+    padding: 6px; /* Espaço interno de cada item da lista */
+    border-radius: 6px; /* Arredonda as bordas de cada item */
+    margin-bottom: 6px; /* Espaço entre um item e outro */
+}
+
+/* Estiliza a div que contém os links de contato */
+.contato {
+    display: flex; /* Coloca os links lado a lado usando flexbox */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 15px; /* Espaço entre os links */
+}
+
+/* Estiliza os links (a) dentro da div de contato */
+.contato a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #ffffff; /* Cor do texto do link (branco) */
+    background-color: #4a90e2; /* Cor de fundo azul do botão de link */
+    padding: 8px 16px; /* Espaço interno do botão (cima/baixo e esquerda/direita) */
+    border-radius: 6px; /* Arredonda as bordas do botão */
+    font-size: 13px; /* Tamanho da fonte do link */
+    transition: background-color 0.3s; /* Suaviza a mudança de cor quando o mouse passa por cima */
+}
+
+/* Estiliza o link quando o mouse passa por cima dele (hover) */
+.contato a:hover {
+    background-color: #357abd; /* Cor mais escura para dar efeito visual ao passar o mouse */
+}

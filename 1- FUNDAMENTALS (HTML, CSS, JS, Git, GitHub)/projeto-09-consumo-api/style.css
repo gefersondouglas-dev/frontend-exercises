@@ -1,0 +1,129 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada na página inteira */
+    background-color: #fdf3e7; /* Fundo bege claro, tom acolhedor */
+    display: flex; /* Flexbox para centralizar a caixa do app */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 50px 20px; /* Espaço nas bordas da página */
+}
+
+/* Estiliza a caixa branca que contém toda a aplicação */
+.caixa-app {
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 14px; /* Bordas arredondadas */
+    padding: 35px; /* Espaço interno */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 440px; /* Mas nunca ultrapassa 440px */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* Sombra suave */
+    text-align: center; /* Centraliza todo o conteúdo da caixa */
+}
+
+/* Estiliza o título */
+.caixa-app h1 {
+    font-size: 20px; /* Tamanho do título */
+    color: #2d2d2d; /* Cor escura */
+}
+
+/* Estiliza o subtítulo abaixo do título */
+.subtitulo {
+    font-size: 12px; /* Tamanho pequeno de fonte */
+    color: #888; /* Cor cinza suave */
+    margin-top: 6px; /* Pequeno espaço acima */
+    margin-bottom: 25px; /* Espaço abaixo, antes do cartão de conselho */
+}
+
+/* Estiliza o cartão onde o texto do conselho aparece */
+.cartao-conselho {
+    background-color: #fdf3e7; /* Mesmo tom bege do fundo da página, criando destaque suave */
+    border: 2px dashed #e0a95c; /* Borda tracejada, dando um estilo de "cartão de sorte" */
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 25px 20px; /* Espaço interno do cartão */
+    margin-bottom: 15px; /* Espaço abaixo do cartão */
+    min-height: 90px; /* Altura mínima, evitando que o layout "pule" quando o texto mudar de tamanho */
+    display: flex; /* Flexbox para centralizar o texto verticalmente dentro do cartão */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estiliza o texto do conselho */
+.texto-conselho {
+    font-size: 15px; /* Tamanho do texto do conselho */
+    color: #4a3520; /* Cor marrom escura, combinando com o tom bege */
+    font-style: italic; /* Itálico, dando um ar de "frase inspiradora" */
+    line-height: 1.5; /* Espaçamento entre linhas para textos mais longos */
+}
+
+/* Classe adicionada pelo JS enquanto a busca na API está em andamento */
+.texto-conselho.carregando {
+    color: #aaa; /* Cor acinzentada, indicando que é um estado temporário */
+    font-style: normal; /* Remove o itálico durante o carregamento */
+}
+
+/* Estiliza a mensagem de erro, exibida caso a busca na API falhe */
+.mensagem-erro {
+    font-size: 12px; /* Tamanho pequeno de fonte */
+    color: #e74c3c; /* Cor vermelha, indicando erro */
+    min-height: 16px; /* Reserva espaço mesmo vazia, evitando "pulos" no layout */
+    margin-bottom: 10px; /* Espaço abaixo da mensagem */
+}
+
+/* Estiliza o botão de buscar novo conselho */
+.botao-buscar {
+    background-color: #e0a95c; /* Cor de fundo laranja/dourado, combinando com o tema */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px 24px; /* Espaço interno do botão */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de "mãozinha" */
+    transition: background-color 0.2s, opacity 0.2s; /* Suaviza mudanças de cor e opacidade */
+}
+
+/* Efeito visual ao passar o mouse sobre o botão (só funciona quando ele não está desabilitado) */
+.botao-buscar:hover:not(:disabled) {
+    background-color: #c78d3f; /* Tom mais escuro do laranja/dourado */
+}
+
+/* Estilo do botão quando está desabilitado (durante o carregamento) */
+.botao-buscar:disabled {
+    opacity: 0.6; /* Deixa o botão visualmente "apagado" */
+    cursor: not-allowed; /* Muda o cursor para indicar que não pode clicar agora */
+}
+
+/* Estiliza a div do histórico de conselhos já buscados */
+.historico {
+    margin-top: 30px; /* Espaço acima do histórico, separando do botão */
+    text-align: left; /* Alinha o texto à esquerda dentro do histórico */
+}
+
+/* Estiliza o título "Histórico desta sessão" */
+.historico h2 {
+    font-size: 13px; /* Tamanho pequeno de fonte */
+    color: #555; /* Cor cinza escura */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas, como um rótulo de seção */
+    letter-spacing: 0.5px; /* Pequeno espaçamento entre as letras, melhorando a leitura em maiúsculas */
+}
+
+/* Estiliza a lista do histórico */
+.lista-historico {
+    list-style: none; /* Remove os pontinhos padrão da lista */
+    max-height: 160px; /* Altura máxima da lista */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se o conteúdo passar da altura máxima */
+}
+
+/* Estiliza cada item do histórico */
+.lista-historico li {
+    font-size: 12px; /* Tamanho pequeno de fonte */
+    color: #666; /* Cor cinza médio */
+    padding: 8px 0; /* Espaço interno em cima/baixo de cada item */
+    border-bottom: 1px solid #f0f0f0; /* Linha fina separando um item do outro */
+}

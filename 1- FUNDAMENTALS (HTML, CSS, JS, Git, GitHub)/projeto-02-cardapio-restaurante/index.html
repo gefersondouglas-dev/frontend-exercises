@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Declara que o documento é HTML5 -->
+<html lang="pt-br"> <!-- Início do HTML, idioma português do Brasil -->
+
+<head> <!-- Configurações e metadados da página -->
+    <meta charset="UTF-8"> <!-- Permite usar acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta a página para celulares -->
+    <title>Cardápio - Restaurante Sabor & Arte</title> <!-- Nome exibido na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Otimiza a conexão com o Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Importa a fonte "Poppins" do Google Fonts para usar no CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Conecta o HTML ao arquivo de estilos -->
+</head>
+
+<body> <!-- Início do conteúdo visível -->
+
+    <header class="topo"> <!-- "header" é uma tag semântica: indica o cabeçalho da página -->
+        <img src="imagens/logo.svg" alt="Logo do restaurante" class="logo"> <!-- Logo do restaurante -->
+        <h1>Restaurante Sabor & Arte</h1> <!-- Título principal com o nome do restaurante -->
+        <p class="slogan">Sabores que contam histórias</p> <!-- Frase de efeito abaixo do nome -->
+    </header>
+
+    <nav class="menu-navegacao"> <!-- "nav" é a tag semântica para menus de navegação -->
+        <a href="#entradas">Entradas</a> <!-- Link que leva até a seção de id "entradas" -->
+        <a href="#pratos-principais">Pratos Principais</a> <!-- Link para a seção de pratos principais -->
+        <a href="#sobremesas">Sobremesas</a> <!-- Link para a seção de sobremesas -->
+    </nav>
+
+    <main> <!-- "main" indica o conteúdo principal e único da página -->
+
+        <section id="entradas" class="secao-cardapio"> <!-- "section" agrupa um bloco de conteúdo relacionado -->
+            <h2>Entradas</h2> <!-- Título da seção de entradas -->
+
+            <article class="item-cardapio"> <!-- "article" representa um item independente: um prato -->
+                <img src="imagens/entrada.svg" alt="Bruschetta" class="foto-prato"> <!-- Imagem do prato -->
+                <div class="info-prato"> <!-- Div para agrupar nome, descrição e preço -->
+                    <h3>Bruschetta Italiana</h3> <!-- Nome do prato -->
+                    <p class="descricao">Pão tostado com tomate, manjericão e azeite extra virgem.</p>
+                    <span class="preco">R$ 22,00</span> <!-- "span" para destacar o preço em linha -->
+                </div>
+            </article>
+
+            <article class="item-cardapio">
+                <img src="imagens/entrada.svg" alt="Carpaccio" class="foto-prato">
+                <div class="info-prato">
+                    <h3>Carpaccio de Carne</h3>
+                    <p class="descricao">Finas fatias de carne com molho de mostarda e alcaparras.</p>
+                    <span class="preco">R$ 28,00</span>
+                </div>
+            </article>
+        </section>
+
+        <section id="pratos-principais" class="secao-cardapio"> <!-- Seção de pratos principais -->
+            <h2>Pratos Principais</h2>
+
+            <article class="item-cardapio">
+                <img src="imagens/prato-principal.svg" alt="Risoto" class="foto-prato">
+                <div class="info-prato">
+                    <h3>Risoto de Funghi</h3>
+                    <p class="descricao">Arroz arbóreo cremoso com cogumelos frescos e parmesão.</p>
+                    <span class="preco">R$ 45,00</span>
+                </div>
+            </article>
+
+            <article class="item-cardapio">
+                <img src="imagens/prato-principal.svg" alt="Salmão" class="foto-prato">
+                <div class="info-prato">
+                    <h3>Salmão Grelhado</h3>
+                    <p class="descricao">Filé de salmão grelhado com legumes salteados.</p>
+                    <span class="preco">R$ 52,00</span>
+                </div>
+            </article>
+        </section>
+
+        <section id="sobremesas" class="secao-cardapio"> <!-- Seção de sobremesas -->
+            <h2>Sobremesas</h2>
+
+            <article class="item-cardapio">
+                <img src="imagens/sobremesa.svg" alt="Petit Gateau" class="foto-prato">
+                <div class="info-prato">
+                    <h3>Petit Gâteau</h3>
+                    <p class="descricao">Bolo de chocolate com recheio cremoso e sorvete de baunilha.</p>
+                    <span class="preco">R$ 18,00</span>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="rodape"> <!-- "footer" é a tag semântica para o rodapé da página -->
+        <p>&copy; 2026 Restaurante Sabor & Arte. Todos os direitos reservados.</p>
+        <!-- "&copy;" é um código especial de HTML que exibe o símbolo © -->
+        <p>Rua das Flores, 123 - Centro | (11) 99999-0000</p> <!-- Endereço e telefone -->
+    </footer>
+
+</body>
+</html>

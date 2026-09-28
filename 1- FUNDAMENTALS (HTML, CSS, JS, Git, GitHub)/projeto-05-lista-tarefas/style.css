@@ -1,0 +1,122 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada na página inteira */
+    background-color: #eef1f5; /* Fundo cinza azulado claro */
+    display: flex; /* Flexbox para centralizar a caixa do app */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 60px 20px; /* Espaço no topo e nas laterais em telas pequenas */
+}
+
+/* Estiliza a caixa branca que contém toda a aplicação */
+.caixa-app {
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 14px; /* Bordas arredondadas */
+    padding: 30px; /* Espaço interno */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 420px; /* Mas nunca ultrapassa 420px */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* Sombra suave para dar profundidade */
+}
+
+/* Estiliza o título */
+.caixa-app h1 {
+    font-size: 20px; /* Tamanho do título */
+    color: #2d2d2d; /* Cor escura */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estiliza a div com o input e o botão de adicionar */
+.area-adicionar {
+    display: flex; /* Coloca input e botão lado a lado */
+    gap: 8px; /* Espaço entre o input e o botão */
+    margin-bottom: 20px; /* Espaço abaixo dessa área */
+}
+
+/* Estiliza o campo de texto */
+.input-tarefa {
+    flex: 1; /* Faz o input ocupar todo o espaço restante ao lado do botão */
+    padding: 10px 12px; /* Espaço interno do campo */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte do texto digitado */
+}
+
+/* Estiliza o campo de texto quando está em foco (o usuário clicou nele) */
+.input-tarefa:focus {
+    outline: none; /* Remove o contorno azul padrão do navegador */
+    border-color: #4a90e2; /* Muda a cor da borda para azul, indicando foco */
+}
+
+/* Estiliza o botão de adicionar tarefa */
+.botao-adicionar {
+    background-color: #4a90e2; /* Cor de fundo azul */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 16px; /* Espaço interno do botão */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de "mãozinha" ao passar o mouse */
+    transition: background-color 0.2s; /* Suaviza a troca de cor no hover */
+}
+
+/* Efeito visual ao passar o mouse sobre o botão de adicionar */
+.botao-adicionar:hover {
+    background-color: #357abd; /* Azul mais escuro */
+}
+
+/* Estiliza a lista (ul) onde as tarefas aparecem */
+.lista-tarefas {
+    list-style: none; /* Remove os pontinhos padrão da lista */
+}
+
+/* Estiliza cada item da lista (cada tarefa), classe que o JS vai colocar em cada "li" criado */
+.item-tarefa {
+    display: flex; /* Coloca o texto e o botão de remover lado a lado */
+    justify-content: space-between; /* Empurra o texto para esquerda e o botão para direita */
+    align-items: center; /* Alinha verticalmente ao centro */
+    background-color: #f7f8fa; /* Fundo cinza bem claro para cada tarefa */
+    padding: 10px 14px; /* Espaço interno de cada item */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 8px; /* Espaço entre uma tarefa e outra */
+}
+
+/* Estiliza o texto da tarefa dentro do item */
+.texto-tarefa {
+    font-size: 14px; /* Tamanho do texto da tarefa */
+    color: #333; /* Cor padrão do texto */
+    cursor: pointer; /* Indica que o texto pode ser clicado (pra marcar como concluída) */
+    flex: 1; /* Ocupa o espaço disponível, empurrando o botão de remover para a direita */
+}
+
+/* Classe adicionada pelo JS quando a tarefa é marcada como concluída */
+.texto-tarefa.concluida {
+    text-decoration: line-through; /* Risca o texto, indicando que foi concluído */
+    color: #999; /* Deixa o texto acinzentado, menos destacado */
+}
+
+/* Estiliza o botão de remover tarefa (o "x") */
+.botao-remover {
+    background: none; /* Sem cor de fundo */
+    border: none; /* Sem borda */
+    color: #e74c3c; /* Cor vermelha, indicando ação de exclusão */
+    font-size: 16px; /* Tamanho do "x" */
+    font-weight: bold; /* Deixa o "x" mais grosso */
+    cursor: pointer; /* Cursor de "mãozinha" */
+    margin-left: 10px; /* Espaço entre o texto da tarefa e o botão */
+}
+
+/* Estiliza o contador de tarefas pendentes no rodapé da caixa */
+.contador-tarefas {
+    font-size: 13px; /* Tamanho pequeno de fonte */
+    color: #777; /* Cor cinza suave */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 15px; /* Espaço acima do contador */
+}

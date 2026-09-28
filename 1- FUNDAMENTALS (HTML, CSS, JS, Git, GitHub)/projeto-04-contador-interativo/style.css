@@ -1,0 +1,125 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada na página inteira */
+    background-color: #1e1e2f; /* Fundo escuro (roxo/azulado) */
+    display: flex; /* Flexbox para centralizar a caixa do contador */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Ocupa a altura inteira da tela */
+}
+
+/* Estiliza a caixa branca que contém o contador */
+.caixa-contador {
+    background-color: #ffffff; /* Fundo branco da caixa */
+    border-radius: 16px; /* Bordas arredondadas */
+    padding: 40px; /* Espaço interno */
+    text-align: center; /* Centraliza todo o texto e elementos internos */
+    width: 320px; /* Largura fixa da caixa */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra para dar profundidade */
+}
+
+/* Estiliza o título */
+.caixa-contador h1 {
+    font-size: 20px; /* Tamanho do título */
+    color: #1e1e2f; /* Cor escura, combinando com o fundo do body */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estiliza o número exibido do contador */
+.numero {
+    font-size: 56px; /* Tamanho bem grande, pois é o elemento principal da página */
+    font-weight: bold; /* Deixa o número em negrito */
+    color: #333; /* Cor padrão do número (neutro) */
+    margin-bottom: 25px; /* Espaço abaixo do número */
+    transition: color 0.3s; /* Suaviza a troca de cor quando o JS mudar (positivo/negativo) */
+}
+
+/* Classe que o JS vai adicionar quando o número for positivo */
+.numero.positivo {
+    color: #2ecc71; /* Verde, indicando valor positivo */
+}
+
+/* Classe que o JS vai adicionar quando o número for negativo */
+.numero.negativo {
+    color: #e74c3c; /* Vermelho, indicando valor negativo */
+}
+
+/* Estiliza a div que agrupa os 3 botões */
+.botoes {
+    display: flex; /* Coloca os botões lado a lado */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaço entre os botões */
+    margin-bottom: 25px; /* Espaço abaixo do grupo de botões */
+}
+
+/* Estilo base compartilhado por todos os botões */
+.botao {
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px 18px; /* Espaço interno do botão */
+    font-size: 16px; /* Tamanho do texto do botão */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Muda o cursor do mouse para indicar que é clicável */
+    transition: opacity 0.2s; /* Suaviza o efeito de opacidade no hover */
+    color: #fff; /* Cor do texto (branco) em todos os botões */
+}
+
+/* Efeito visual quando o mouse passa sobre qualquer botão */
+.botao:hover {
+    opacity: 0.85; /* Deixa o botão levemente transparente, indicando interação */
+}
+
+/* Cor específica do botão de diminuir */
+.botao-diminuir {
+    background-color: #e74c3c; /* Vermelho */
+}
+
+/* Cor específica do botão de resetar */
+.botao-resetar {
+    background-color: #7f8c8d; /* Cinza */
+    font-size: 13px; /* Fonte um pouco menor, pois o texto "Resetar" é mais longo */
+}
+
+/* Cor específica do botão de aumentar */
+.botao-aumentar {
+    background-color: #2ecc71; /* Verde */
+}
+
+/* Estiliza a área de configuração do "passo" (input numérico) */
+.config-passo {
+    display: flex; /* Coloca o label e o input lado a lado */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 10px; /* Espaço entre o label e o input */
+    margin-bottom: 15px; /* Espaço abaixo dessa área */
+}
+
+/* Estiliza o texto do label "Passo:" */
+.config-passo label {
+    font-size: 14px; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+
+/* Estiliza o campo numérico do passo */
+.input-passo {
+    width: 60px; /* Largura pequena, pois é só um número curto */
+    padding: 6px; /* Espaço interno do campo */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 6px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o número dentro do campo */
+    font-size: 14px; /* Tamanho da fonte dentro do campo */
+}
+
+/* Estiliza a mensagem dinâmica que o JS escreve */
+.mensagem {
+    font-size: 13px; /* Tamanho pequeno, por ser uma informação extra */
+    color: #888; /* Cor cinza suave */
+    min-height: 18px; /* Reserva um espaço mesmo quando está vazia, evitando "pulos" no layout */
+}

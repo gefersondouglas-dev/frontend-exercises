@@ -1,0 +1,295 @@
+/* Reset básico aplicado a todos os elementos da página */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte usada em toda a página */
+    color: #2d2d2d; /* Cor padrão do texto */
+    line-height: 1.6; /* Espaçamento entre linhas para melhorar leitura */
+}
+
+/* ---------- CABEÇALHO ---------- */
+
+.cabecalho {
+    display: flex; /* Flexbox para colocar logo e menu lado a lado */
+    justify-content: space-between; /* Empurra logo para esquerda e menu para direita */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 20px 60px; /* Espaço interno: 20px em cima/baixo, 60px nas laterais */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra leve para separar do conteúdo */
+    position: sticky; /* Cabeçalho gruda no topo ao rolar a página */
+    top: 0; /* Distância zero do topo */
+    z-index: 100; /* Garante que fique acima de outros elementos */
+}
+
+.logo {
+    font-size: 22px; /* Tamanho do texto da logo */
+    font-weight: 700; /* Negrito forte */
+    color: #4a3aff; /* Cor roxo/azul, cor principal da marca */
+}
+
+.navegacao a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #2d2d2d; /* Cor do texto dos links */
+    margin-left: 30px; /* Espaço à esquerda entre cada link do menu */
+    font-weight: 600; /* Texto semi-negrito */
+    transition: color 0.3s; /* Suaviza a troca de cor no hover */
+}
+
+.navegacao a:hover {
+    color: #4a3aff; /* Cor de destaque ao passar o mouse */
+}
+
+/* ---------- HERO (seção inicial de destaque) ---------- */
+
+.hero {
+    display: grid; /* Usa CSS Grid para organizar texto e imagem */
+    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de mesmo tamanho (1 fração cada) */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do grid */
+    gap: 40px; /* Espaço entre a coluna de texto e a coluna de imagem */
+    padding: 80px 60px; /* Espaço interno da seção */
+    background-color: #f5f4ff; /* Fundo lilás bem claro */
+}
+
+.hero-texto h1 {
+    font-size: 36px; /* Tamanho grande para o título principal */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #1a1a1a; /* Cor bem escura para dar destaque */
+}
+
+.hero-texto p {
+    font-size: 16px; /* Tamanho do parágrafo */
+    color: #555; /* Cor cinza médio */
+    margin-bottom: 25px; /* Espaço abaixo do parágrafo, antes do botão */
+}
+
+.botao-cta {
+    display: inline-block; /* Permite aplicar padding como se fosse um bloco, mas mantém alinhado ao texto */
+    background-color: #4a3aff; /* Cor de fundo roxo/azul do botão */
+    color: #fff; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado do link */
+    padding: 14px 28px; /* Espaço interno do botão, deixando-o maior e clicável */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: 600; /* Texto semi-negrito */
+    transition: background-color 0.3s; /* Suaviza a mudança de cor no hover */
+}
+
+.botao-cta:hover {
+    background-color: #372dcc; /* Cor mais escura ao passar o mouse */
+}
+
+.hero-imagem {
+    width: 100%; /* Imagem ocupa toda a largura da coluna do grid */
+    max-width: 380px; /* Mas nunca ultrapassa 380px, para não ficar gigante */
+    justify-self: center; /* Centraliza a imagem dentro da célula do grid */
+}
+
+/* ---------- FUNCIONALIDADES ---------- */
+
+.funcionalidades {
+    padding: 80px 60px; /* Espaço interno da seção */
+    text-align: center; /* Centraliza o título da seção */
+}
+
+.funcionalidades h2 {
+    font-size: 28px; /* Tamanho do título da seção */
+    margin-bottom: 50px; /* Espaço abaixo do título, antes do grid de cards */
+}
+
+.grid-funcionalidades {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
+    gap: 30px; /* Espaço entre os cards, tanto na horizontal quanto na vertical */
+}
+
+.card-funcionalidade {
+    background-color: #fff; /* Fundo branco do card */
+    padding: 30px; /* Espaço interno do card */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Sombra suave para dar profundidade */
+    text-align: center; /* Centraliza o conteúdo dentro do card */
+}
+
+.icone {
+    width: 50px; /* Largura do ícone */
+    height: 50px; /* Altura do ícone */
+    margin-bottom: 15px; /* Espaço abaixo do ícone */
+}
+
+.card-funcionalidade h3 {
+    font-size: 18px; /* Tamanho do nome da funcionalidade */
+    margin-bottom: 10px; /* Espaço abaixo do título do card */
+}
+
+.card-funcionalidade p {
+    font-size: 14px; /* Tamanho da descrição */
+    color: #666; /* Cor cinza para o texto secundário */
+}
+
+/* ---------- PLANOS ---------- */
+
+.planos {
+    background-color: #f5f4ff; /* Fundo lilás claro, igual ao hero, para criar identidade visual */
+    padding: 80px 60px; /* Espaço interno da seção */
+    text-align: center; /* Centraliza o título */
+}
+
+.planos h2 {
+    font-size: 28px; /* Tamanho do título da seção */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+}
+
+.grid-planos {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Cria colunas flexíveis: no mínimo 240px, se ajustando ao espaço disponível */
+    gap: 30px; /* Espaço entre os cards de planos */
+    max-width: 1000px; /* Largura máxima do grid inteiro */
+    margin: 0 auto; /* Centraliza o grid na página */
+}
+
+.card-plano {
+    background-color: #fff; /* Fundo branco do card */
+    padding: 40px 25px; /* Espaço interno do card */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Sombra suave */
+}
+
+.card-plano.destaque {
+    border: 3px solid #4a3aff; /* Borda colorida para destacar o plano do meio (Pro) */
+    transform: scale(1.05); /* Deixa esse card ligeiramente maior que os outros */
+}
+
+.card-plano h3 {
+    font-size: 20px; /* Tamanho do nome do plano */
+    margin-bottom: 15px; /* Espaço abaixo do nome do plano */
+}
+
+.preco-plano {
+    font-size: 32px; /* Tamanho grande para o valor do plano */
+    font-weight: 700; /* Negrito forte */
+    color: #4a3aff; /* Cor roxo/azul, cor principal da marca */
+    margin-bottom: 20px; /* Espaço abaixo do preço */
+}
+
+.preco-plano span {
+    font-size: 14px; /* Tamanho menor para o "/mês" */
+    font-weight: 400; /* Peso normal, sem negrito, para diferenciar do valor principal */
+    color: #888; /* Cor mais clara para o texto secundário */
+}
+
+.card-plano ul {
+    list-style: none; /* Remove os pontinhos padrão da lista */
+    margin-bottom: 25px; /* Espaço abaixo da lista, antes do botão */
+}
+
+.card-plano li {
+    font-size: 14px; /* Tamanho de cada item da lista */
+    margin-bottom: 10px; /* Espaço entre um item e outro */
+    color: #444; /* Cor do texto de cada item */
+}
+
+.botao-plano {
+    display: inline-block; /* Permite aplicar padding mantendo o link alinhado */
+    text-decoration: none; /* Remove sublinhado do link */
+    background-color: #4a3aff; /* Cor de fundo do botão */
+    color: #fff; /* Texto branco */
+    padding: 12px 30px; /* Espaço interno do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: 600; /* Texto semi-negrito */
+    transition: background-color 0.3s; /* Suaviza a troca de cor no hover */
+}
+
+.botao-plano:hover {
+    background-color: #372dcc; /* Cor mais escura ao passar o mouse */
+}
+
+/* ---------- DEPOIMENTOS ---------- */
+
+.depoimentos {
+    padding: 80px 60px; /* Espaço interno da seção */
+    text-align: center; /* Centraliza o título */
+}
+
+.depoimentos h2 {
+    font-size: 28px; /* Tamanho do título */
+    margin-bottom: 50px; /* Espaço abaixo do título */
+}
+
+.grid-depoimentos {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas flexíveis com no mínimo 280px */
+    gap: 30px; /* Espaço entre os depoimentos */
+    max-width: 900px; /* Largura máxima do conjunto */
+    margin: 0 auto; /* Centraliza o grid na página */
+}
+
+.card-depoimento {
+    background-color: #f9f9f9; /* Fundo cinza bem claro */
+    padding: 30px; /* Espaço interno do card */
+    border-radius: 12px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.avatar {
+    width: 60px; /* Largura da foto do cliente */
+    height: 60px; /* Altura da foto do cliente */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-bottom: 15px; /* Espaço abaixo da foto */
+}
+
+.texto-depoimento {
+    font-size: 14px; /* Tamanho do texto do depoimento */
+    font-style: italic; /* Itálico, para diferenciar de texto comum */
+    color: #444; /* Cor cinza escuro */
+    margin-bottom: 15px; /* Espaço abaixo do depoimento, antes do nome */
+}
+
+.nome-cliente {
+    font-size: 13px; /* Tamanho do nome do cliente */
+    font-weight: 600; /* Semi-negrito */
+    color: #4a3aff; /* Cor de destaque, mesma da marca */
+}
+
+/* ---------- RODAPÉ ---------- */
+
+.rodape {
+    background-color: #1a1a1a; /* Fundo escuro para o rodapé */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 25px; /* Espaço interno do rodapé */
+    font-size: 13px; /* Tamanho pequeno de fonte */
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+/* Regras aplicadas quando a tela tem 900px de largura ou menos (tablets) */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr; /* Muda de 2 colunas para 1 coluna só (empilha texto e imagem) */
+        text-align: center; /* Centraliza o texto quando empilhado */
+    }
+
+    .hero-imagem {
+        margin: 0 auto; /* Centraliza a imagem quando ela fica sozinha na linha */
+    }
+
+    .grid-funcionalidades {
+        grid-template-columns: 1fr; /* Os 3 cards de funcionalidades passam a ficar em 1 coluna só */
+    }
+
+    .card-plano.destaque {
+        transform: scale(1); /* Remove o efeito de "aumentado" no plano em destaque em telas menores */
+    }
+}
+
+/* Regras aplicadas quando a tela tem 600px de largura ou menos (celulares) */
+@media (max-width: 600px) {
+    .cabecalho, .hero, .funcionalidades, .planos, .depoimentos {
+        padding-left: 20px; /* Reduz o espaçamento lateral em telas pequenas */
+        padding-right: 20px; /* Reduz o espaçamento lateral em telas pequenas */
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- Diz ao navegador que este é um documento HTML5 -->
+<html lang="pt-br"> <!-- Início do documento HTML, "lang" define o idioma da página -->
+
+<head> <!-- Área de informações que não aparecem visualmente na página, apenas configurações -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres, permite usar acentos e ç -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página se adaptar a telas de celular -->
+    <title>Meu Cartão de Perfil</title> <!-- Texto que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Conecta este HTML ao arquivo de estilos CSS -->
+</head>
+
+<body> <!-- Início do conteúdo visível da página -->
+
+    <div class="cartao"> <!-- Uma "caixa" (div) que vai agrupar todo o cartão de perfil -->
+
+        <img src="imagens/perfil.svg" alt="Foto de perfil" class="foto-perfil">
+        <!-- Imagem de perfil: "src" indica o caminho do arquivo, "alt" é o texto alternativo (acessibilidade) -->
+
+        <h1 class="nome">Geferson Dev</h1> <!-- Título principal: nome da pessoa do cartão -->
+
+        <p class="cargo">Estudante de Desenvolvimento Web</p> <!-- Parágrafo curto, tipo um subtítulo -->
+
+        <p class="bio"> <!-- Parágrafo com uma breve descrição sobre a pessoa -->
+            Olá! Estou aprendendo HTML, CSS e JavaScript para me tornar
+            desenvolvedor front-end. Este é meu primeiro projeto de prática.
+        </p>
+
+        <ul class="lista-interesses"> <!-- Lista não ordenada (ul = unordered list) com pontinhos -->
+            <li>Interesse: Programação</li> <!-- Cada "li" (list item) é um item da lista -->
+            <li>Interesse: Jogos</li>
+            <li>Interesse: Tecnologia</li>
+        </ul>
+
+        <div class="contato"> <!-- Div para agrupar os links de contato -->
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <!-- Link (a = anchor). "href" é o destino do link, "target=_blank" abre em nova aba -->
+            <a href="mailto:seuemail@exemplo.com">E-mail</a>
+            <!-- Link especial "mailto" abre o programa de e-mail padrão do usuário -->
+        </div>
+
+    </div> <!-- Fim da div "cartao" -->
+
+</body> <!-- Fim do conteúdo visível -->
+
+</html> <!-- Fim do documento HTML -->

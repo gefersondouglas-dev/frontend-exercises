@@ -1,0 +1,149 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Faz padding e borda entrarem no cálculo da largura/altura */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Usa a fonte importada do Google Fonts, com alternativa padrão */
+    background-color: #fdf6ec; /* Cor de fundo bege claro, remete a restaurante */
+    color: #333; /* Cor padrão do texto (cinza escuro) */
+}
+
+/* Estiliza o cabeçalho (header) */
+.topo {
+    background-color: #7a2e2e; /* Cor vinho escuro de fundo do cabeçalho */
+    color: #fff; /* Texto branco para contrastar com o fundo escuro */
+    text-align: center; /* Centraliza todo o conteúdo do cabeçalho */
+    padding: 40px 20px; /* Espaço interno em cima/baixo (40px) e nas laterais (20px) */
+}
+
+/* Estiliza a logo dentro do cabeçalho */
+.logo {
+    width: 70px; /* Define a largura da logo */
+    height: 70px; /* Define a altura da logo */
+    margin-bottom: 10px; /* Espaço abaixo da logo */
+}
+
+/* Estiliza o título principal (h1) dentro do cabeçalho */
+.topo h1 {
+    font-size: 28px; /* Tamanho grande para o nome do restaurante */
+    font-weight: 700; /* Deixa a fonte bem grossa (negrito forte) */
+}
+
+/* Estiliza o slogan abaixo do título */
+.slogan {
+    font-size: 14px; /* Tamanho menor, por ser um texto secundário */
+    font-style: italic; /* Deixa o texto em itálico */
+    margin-top: 5px; /* Pequeno espaço acima do slogan */
+    opacity: 0.85; /* Deixa o texto levemente transparente, mais suave */
+}
+
+/* Estiliza o menu de navegação */
+.menu-navegacao {
+    display: flex; /* Ativa flexbox para colocar os links lado a lado */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 30px; /* Espaço entre cada link do menu */
+    background-color: #fff; /* Fundo branco para destacar o menu do cabeçalho */
+    padding: 15px; /* Espaço interno do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve embaixo do menu, separando do conteúdo */
+    position: sticky; /* Faz o menu "grudar" no topo ao rolar a página */
+    top: 0; /* Define que ele gruda exatamente no topo (0px de distância) */
+    z-index: 10; /* Garante que o menu fique por cima de outros elementos ao rolar */
+}
+
+/* Estiliza os links dentro do menu de navegação */
+.menu-navegacao a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #7a2e2e; /* Cor vinho, combinando com o cabeçalho */
+    font-weight: 600; /* Deixa o texto semi-negrito */
+    font-size: 14px; /* Tamanho do texto dos links */
+    transition: color 0.3s; /* Suaviza a troca de cor ao passar o mouse */
+}
+
+/* Estiliza o link do menu quando o mouse passa por cima */
+.menu-navegacao a:hover {
+    color: #c0505a; /* Cor mais clara/vibrante ao passar o mouse, dando destaque */
+}
+
+/* Estiliza cada seção do cardápio (Entradas, Pratos Principais, Sobremesas) */
+.secao-cardapio {
+    max-width: 800px; /* Largura máxima da seção, para não esticar demais em telas grandes */
+    margin: 0 auto; /* Centraliza a seção horizontalmente na página */
+    padding: 40px 20px; /* Espaço interno em cima/baixo e nas laterais */
+}
+
+/* Estiliza o título (h2) de cada seção */
+.secao-cardapio h2 {
+    font-size: 22px; /* Tamanho do título da seção */
+    color: #7a2e2e; /* Cor vinho, mantendo a identidade visual */
+    margin-bottom: 20px; /* Espaço abaixo do título, separando dos itens */
+    border-bottom: 2px solid #7a2e2e; /* Linha decorativa abaixo do título */
+    padding-bottom: 8px; /* Espaço entre o texto e a linha decorativa */
+}
+
+/* Estiliza cada item do cardápio (cada prato) usando Flexbox */
+.item-cardapio {
+    display: flex; /* Ativa flexbox para colocar imagem e texto lado a lado */
+    align-items: center; /* Alinha imagem e texto verticalmente ao centro */
+    gap: 20px; /* Espaço entre a imagem e o texto do prato */
+    background-color: #fff; /* Fundo branco para cada item, destacando do fundo bege */
+    border-radius: 10px; /* Arredonda as bordas do item */
+    padding: 15px; /* Espaço interno do item */
+    margin-bottom: 15px; /* Espaço entre um item e o próximo */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Sombra leve para dar profundidade ao item */
+}
+
+/* Estiliza a imagem de cada prato */
+.foto-prato {
+    width: 70px; /* Largura da imagem do prato */
+    height: 70px; /* Altura da imagem do prato */
+    border-radius: 8px; /* Arredonda levemente as bordas da imagem */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem esticar/distorcer */
+    flex-shrink: 0; /* Impede que a imagem encolha quando a tela for menor */
+}
+
+/* Estiliza a div com as informações do prato (nome, descrição, preço) */
+.info-prato {
+    display: flex; /* Ativa flexbox para organizar nome, descrição e preço em coluna */
+    flex-direction: column; /* Empilha os elementos de cima para baixo */
+    gap: 4px; /* Pequeno espaço entre nome, descrição e preço */
+}
+
+/* Estiliza o nome do prato (h3) */
+.info-prato h3 {
+    font-size: 16px; /* Tamanho do nome do prato */
+    color: #222; /* Cor escura para destacar o nome */
+}
+
+/* Estiliza a descrição do prato */
+.descricao {
+    font-size: 13px; /* Tamanho menor, por ser um texto secundário */
+    color: #666; /* Cor cinza médio, suave para leitura */
+}
+
+/* Estiliza o preço do prato */
+.preco {
+    font-size: 14px; /* Tamanho do preço */
+    font-weight: 700; /* Deixa o preço em negrito para se destacar */
+    color: #7a2e2e; /* Cor vinho, mantendo a identidade visual do site */
+}
+
+/* Estiliza o rodapé da página */
+.rodape {
+    background-color: #7a2e2e; /* Mesma cor vinho do cabeçalho, criando simetria visual */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px; /* Espaço interno do rodapé */
+    font-size: 13px; /* Tamanho menor de fonte, por ser informação secundária */
+}
+
+/* Regras que só se aplicam quando a tela tem 500px de largura ou menos (celulares) */
+@media (max-width: 500px) {
+    .item-cardapio {
+        flex-direction: column; /* Em telas pequenas, empilha a imagem em cima do texto */
+        text-align: center; /* Centraliza o texto quando estiver empilhado */
+    }
+}

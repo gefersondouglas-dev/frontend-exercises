@@ -1,0 +1,427 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo geral do corpo, válido para as 3 páginas do site */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada em todo o site */
+    color: #2d2d2d; /* Cor padrão do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    background-color: #fafafa; /* Fundo cinza bem claro */
+}
+
+/* ---------- CABEÇALHO (compartilhado pelas 3 páginas) ---------- */
+
+.cabecalho {
+    display: flex; /* Flexbox para logo e menu lado a lado */
+    justify-content: space-between; /* Logo à esquerda, menu à direita */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 20px 60px; /* Espaço interno */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra leve */
+    position: sticky; /* Gruda no topo ao rolar a página */
+    top: 0; /* Distância zero do topo */
+    z-index: 100; /* Fica acima de outros elementos */
+}
+
+.logo {
+    font-size: 20px; /* Tamanho da logo */
+    font-weight: 700; /* Negrito forte */
+    color: #4a3aff; /* Cor roxo/azul, cor principal da marca */
+}
+
+.navegacao a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #2d2d2d; /* Cor padrão dos links */
+    margin-left: 25px; /* Espaço entre cada link */
+    font-weight: 600; /* Semi-negrito */
+    padding-bottom: 4px; /* Espaço para a borda inferior aparecer sem "colar" no texto */
+    transition: color 0.2s; /* Suaviza a troca de cor */
+}
+
+.navegacao a:hover {
+    color: #4a3aff; /* Cor de destaque ao passar o mouse */
+}
+
+/* Classe que marca qual link do menu representa a página atual */
+.navegacao a.ativo {
+    color: #4a3aff; /* Cor de destaque */
+    border-bottom: 2px solid #4a3aff; /* Linha embaixo do link ativo */
+}
+
+/* ---------- HERO (usado só na página inicial) ---------- */
+
+.hero {
+    text-align: center; /* Centraliza todo o conteúdo */
+    padding: 70px 20px; /* Espaço interno da seção */
+    background-color: #f5f4ff; /* Fundo lilás bem claro */
+}
+
+.avatar-hero {
+    width: 100px; /* Largura do avatar */
+    height: 100px; /* Altura do avatar */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-bottom: 20px; /* Espaço abaixo do avatar */
+    border: 4px solid #4a3aff; /* Borda roxa ao redor da imagem */
+}
+
+.hero h1 {
+    font-size: 30px; /* Tamanho do título de boas-vindas */
+    margin-bottom: 12px; /* Espaço abaixo do título */
+}
+
+.hero p {
+    font-size: 15px; /* Tamanho do parágrafo */
+    color: #555; /* Cor cinza médio */
+    max-width: 480px; /* Largura máxima, evitando linhas muito longas */
+    margin: 0 auto 25px auto; /* Centraliza e cria espaço abaixo (cima, direita, baixo, esquerda) */
+}
+
+.botao-cta {
+    display: inline-block; /* Permite padding mantendo o link alinhado */
+    background-color: #4a3aff; /* Cor de fundo roxo/azul */
+    color: #fff; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 12px 26px; /* Espaço interno do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: 600; /* Semi-negrito */
+    transition: background-color 0.2s; /* Suaviza a troca de cor no hover */
+}
+
+.botao-cta:hover {
+    background-color: #372dcc; /* Cor mais escura ao passar o mouse */
+}
+
+/* ---------- SEÇÃO "SOBRE" (página inicial) ---------- */
+
+.sobre {
+    max-width: 700px; /* Largura máxima do texto */
+    margin: 0 auto; /* Centraliza a seção */
+    padding: 60px 20px; /* Espaço interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.sobre h2 {
+    font-size: 24px; /* Tamanho do título da seção */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+.sobre p {
+    color: #555; /* Cor cinza médio */
+    font-size: 15px; /* Tamanho do parágrafo */
+}
+
+/* ---------- HABILIDADES (página inicial, usa CSS Grid) ---------- */
+
+.habilidades {
+    padding: 60px 20px; /* Espaço interno da seção */
+    text-align: center; /* Centraliza o título */
+}
+
+.habilidades h2 {
+    font-size: 22px; /* Tamanho do título */
+    margin-bottom: 35px; /* Espaço abaixo do título */
+}
+
+.grid-habilidades {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas flexíveis, no mínimo 220px */
+    gap: 25px; /* Espaço entre os cards */
+    max-width: 900px; /* Largura máxima do grid inteiro */
+    margin: 0 auto; /* Centraliza o grid */
+}
+
+.card-habilidade {
+    background-color: #fff; /* Fundo branco do card */
+    padding: 25px; /* Espaço interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Sombra suave */
+}
+
+.icone-habilidade {
+    width: 45px; /* Largura do ícone */
+    height: 45px; /* Altura do ícone */
+    margin-bottom: 12px; /* Espaço abaixo do ícone */
+}
+
+.card-habilidade h3 {
+    font-size: 16px; /* Tamanho do título do card */
+    margin-bottom: 8px; /* Espaço abaixo do título */
+}
+
+.card-habilidade p {
+    font-size: 13px; /* Tamanho da descrição */
+    color: #666; /* Cor cinza para texto secundário */
+}
+
+/* ---------- CABEÇALHO DE PÁGINA INTERNA (Projetos e Contato) ---------- */
+
+.cabecalho-pagina {
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 50px 20px 30px 20px; /* Espaço interno (cima, direita, baixo, esquerda) */
+}
+
+.cabecalho-pagina h1 {
+    font-size: 26px; /* Tamanho do título da página */
+    margin-bottom: 8px; /* Espaço abaixo do título */
+}
+
+.cabecalho-pagina p {
+    color: #666; /* Cor cinza para o texto secundário */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* ---------- PÁGINA DE PROJETOS ---------- */
+
+.secao-projetos {
+    max-width: 1000px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+    padding: 20px 20px 60px 20px; /* Espaço interno */
+}
+
+.filtros {
+    display: flex; /* Coloca os botões lado a lado */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    gap: 10px; /* Espaço entre os botões */
+    margin-bottom: 30px; /* Espaço abaixo dos filtros */
+}
+
+.botao-filtro {
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #ddd; /* Borda cinza clara */
+    border-radius: 20px; /* Formato de "pílula" */
+    padding: 8px 20px; /* Espaço interno */
+    font-size: 13px; /* Tamanho da fonte */
+    font-weight: 600; /* Semi-negrito */
+    color: #555; /* Cor do texto */
+    cursor: pointer; /* Cursor de "mãozinha" */
+    transition: all 0.2s; /* Suaviza qualquer mudança de estilo */
+}
+
+.botao-filtro:hover {
+    border-color: #4a3aff; /* Borda roxa ao passar o mouse */
+    color: #4a3aff; /* Texto roxo ao passar o mouse */
+}
+
+.botao-filtro.ativo {
+    background-color: #4a3aff; /* Fundo roxo sólido no filtro selecionado */
+    border-color: #4a3aff; /* Borda da mesma cor */
+    color: #fff; /* Texto branco */
+}
+
+.grid-projetos {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Colunas flexíveis, no mínimo 240px */
+    gap: 24px; /* Espaço entre os cards de projeto */
+}
+
+.card-projeto {
+    background-color: #fff; /* Fundo branco do card */
+    border-radius: 12px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde partes da imagem que ultrapassem as bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Sombra suave */
+    transition: transform 0.2s; /* Suaviza o efeito de "levantar" no hover */
+}
+
+.card-projeto:hover {
+    transform: translateY(-4px); /* Levanta levemente o card, dando destaque */
+}
+
+.card-projeto img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 150px; /* Altura fixa para manter os cards do mesmo tamanho */
+    object-fit: cover; /* Preenche sem distorcer */
+    display: block; /* Remove espaço extra que imagens têm por padrão */
+}
+
+.info-card-projeto {
+    padding: 16px; /* Espaço interno da área de texto do card */
+}
+
+.info-card-projeto h3 {
+    font-size: 15px; /* Tamanho do nome do projeto */
+    margin-bottom: 6px; /* Espaço abaixo do nome */
+}
+
+.info-card-projeto p {
+    font-size: 13px; /* Tamanho da descrição */
+    color: #666; /* Cor cinza para texto secundário */
+}
+
+/* Classe que o JS adiciona para esconder um card que não corresponde ao filtro escolhido */
+.card-projeto.escondido {
+    display: none; /* Remove o card da tela sem apagar do HTML */
+}
+
+.sem-resultados {
+    text-align: center; /* Centraliza o texto */
+    color: #888; /* Cor cinza suave */
+    margin-top: 25px; /* Espaço acima da mensagem */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* ---------- PÁGINA DE CONTATO ---------- */
+
+.secao-contato {
+    max-width: 480px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+    padding: 20px 20px 60px 20px; /* Espaço interno */
+}
+
+.cartao-frase {
+    background-color: #f5f4ff; /* Fundo lilás claro */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 18px; /* Espaço interno */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px; /* Espaço abaixo do cartão */
+}
+
+.texto-frase {
+    font-size: 14px; /* Tamanho do texto da frase */
+    font-style: italic; /* Itálico, dando ar de citação */
+    color: #4a3aff; /* Cor roxa, combinando com a marca */
+}
+
+.formulario-contato {
+    background-color: #fff; /* Fundo branco do formulário */
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 25px; /* Espaço interno */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Sombra suave */
+}
+
+.campo {
+    margin-bottom: 16px; /* Espaço entre um campo e o próximo */
+    display: flex; /* Flexbox para empilhar label, input e erro */
+    flex-direction: column; /* Organiza de cima para baixo */
+}
+
+.campo label {
+    font-size: 13px; /* Tamanho do rótulo */
+    color: #555; /* Cor cinza escura */
+    margin-bottom: 6px; /* Espaço abaixo do rótulo */
+    font-weight: 600; /* Semi-negrito */
+}
+
+.campo input,
+.campo textarea {
+    padding: 10px 12px; /* Espaço interno do campo */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    font-family: inherit; /* Faz o textarea herdar a mesma fonte do resto da página */
+    resize: vertical; /* Permite redimensionar o textarea só verticalmente */
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none; /* Remove contorno azul padrão do navegador */
+    border-color: #4a3aff; /* Borda roxa, indicando foco */
+}
+
+.campo input.invalido,
+.campo textarea.invalido {
+    border-color: #e74c3c; /* Borda vermelha quando o campo está inválido */
+}
+
+.campo input.valido,
+.campo textarea.valido {
+    border-color: #2ecc71; /* Borda verde quando o campo está válido */
+}
+
+.erro {
+    font-size: 12px; /* Tamanho da mensagem de erro */
+    color: #e74c3c; /* Cor vermelha */
+    margin-top: 4px; /* Pequeno espaço acima da mensagem */
+    min-height: 14px; /* Reserva espaço mesmo vazia */
+}
+
+.botao-enviar {
+    width: 100%; /* Ocupa toda a largura do formulário */
+    background-color: #4a3aff; /* Cor de fundo roxo */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px; /* Espaço interno do botão */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de "mãozinha" */
+    transition: background-color 0.2s; /* Suaviza a troca de cor no hover */
+}
+
+.botao-enviar:hover {
+    background-color: #372dcc; /* Cor mais escura ao passar o mouse */
+}
+
+.mensagem-sucesso {
+    text-align: center; /* Centraliza o texto */
+    color: #2ecc71; /* Cor verde, indicando sucesso */
+    font-size: 13px; /* Tamanho da fonte */
+    margin-top: 12px; /* Espaço acima da mensagem */
+    font-weight: 600; /* Semi-negrito */
+}
+
+.mensagens-salvas {
+    margin-top: 35px; /* Espaço acima da lista de mensagens salvas */
+}
+
+.mensagens-salvas h2 {
+    font-size: 13px; /* Tamanho pequeno de fonte */
+    color: #555; /* Cor cinza escura */
+    text-transform: uppercase; /* Texto em maiúsculas, como rótulo de seção */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    margin-bottom: 12px; /* Espaço abaixo do título */
+}
+
+.lista-mensagens {
+    list-style: none; /* Remove os pontinhos padrão da lista */
+}
+
+.item-mensagem {
+    background-color: #fff; /* Fundo branco de cada mensagem salva */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px 14px; /* Espaço interno */
+    margin-bottom: 10px; /* Espaço entre uma mensagem e outra */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Sombra bem leve */
+}
+
+.item-mensagem .nome-remetente {
+    font-size: 13px; /* Tamanho do nome de quem enviou */
+    font-weight: 700; /* Negrito forte */
+    color: #333; /* Cor escura */
+}
+
+.item-mensagem .texto-mensagem {
+    font-size: 13px; /* Tamanho do texto da mensagem */
+    color: #666; /* Cor cinza para texto secundário */
+    margin-top: 4px; /* Pequeno espaço acima do texto */
+}
+
+/* ---------- RODAPÉ (compartilhado pelas 3 páginas) ---------- */
+
+.rodape {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 22px; /* Espaço interno */
+    font-size: 12px; /* Tamanho pequeno de fonte */
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+/* Regras aplicadas em telas de 600px de largura ou menos (celulares) */
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 15px 20px; /* Reduz o espaçamento lateral do cabeçalho */
+        flex-direction: column; /* Empilha logo e menu em telas muito pequenas */
+        gap: 10px; /* Espaço entre logo e menu quando empilhados */
+    }
+
+    .navegacao a {
+        margin-left: 12px; /* Reduz o espaço entre os links do menu */
+        margin-right: 12px; /* Adiciona espaço também à direita, já que ficou centralizado */
+    }
+}

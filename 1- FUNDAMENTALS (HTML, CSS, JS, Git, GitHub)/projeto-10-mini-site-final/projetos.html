@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Geferson Dev - Projetos</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao mesmo CSS compartilhado -->
+</head>
+
+<body>
+
+    <header class="cabecalho"> <!-- Mesmo cabeçalho da página inicial, repetido aqui -->
+        <div class="logo">Geferson Dev</div>
+        <nav class="navegacao">
+            <a href="index.html">Início</a>
+            <a href="projetos.html" class="ativo">Projetos</a> <!-- Agora esta página está marcada como ativa -->
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <section class="cabecalho-pagina"> <!-- Pequeno cabeçalho de título da página interna -->
+        <h1>Meus Projetos</h1>
+        <p>Alguns dos projetos que venho praticando durante meus estudos.</p>
+    </section>
+
+    <section class="secao-projetos"> <!-- Seção principal com o filtro e a galeria de projetos -->
+
+        <div class="filtros" id="filtros"> <!-- Botões de filtro por categoria -->
+            <button class="botao-filtro ativo" data-filtro="todos">Todos</button>
+            <button class="botao-filtro" data-filtro="site">Sites</button>
+            <button class="botao-filtro" data-filtro="app">Aplicativos</button>
+            <button class="botao-filtro" data-filtro="jogo">Jogos</button>
+        </div>
+
+        <div class="grid-projetos" id="grid-projetos"> <!-- Grid com os cards de projeto -->
+
+            <article class="card-projeto" data-categoria="site">
+                <img src="imagens/projeto-cardapio.svg" alt="Cardápio de restaurante">
+                <div class="info-card-projeto">
+                    <h3>Cardápio de Restaurante</h3>
+                    <p>Página com HTML semântico e Flexbox.</p>
+                </div>
+            </article>
+
+            <article class="card-projeto" data-categoria="app">
+                <img src="imagens/projeto-tarefas.svg" alt="Lista de tarefas">
+                <div class="info-card-projeto">
+                    <h3>Lista de Tarefas</h3>
+                    <p>App com JavaScript e persistência via localStorage.</p>
+                </div>
+            </article>
+
+            <article class="card-projeto" data-categoria="site">
+                <img src="imagens/projeto-landing.svg" alt="Landing page">
+                <div class="info-card-projeto">
+                    <h3>Landing Page</h3>
+                    <p>Página de produto usando CSS Grid.</p>
+                </div>
+            </article>
+
+            <article class="card-projeto" data-categoria="jogo">
+                <img src="imagens/projeto-jogo.svg" alt="Jogo de contagem">
+                <div class="info-card-projeto">
+                    <h3>Contador Interativo</h3>
+                    <p>Primeiro projeto de manipulação do DOM com JS.</p>
+                </div>
+            </article>
+
+            <article class="card-projeto" data-categoria="app">
+                <img src="imagens/projeto-galeria.svg" alt="Galeria com filtro">
+                <div class="info-card-projeto">
+                    <h3>Galeria com Filtro</h3>
+                    <p>Galeria de imagens filtrada dinamicamente por categoria.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="sem-resultados" id="sem-resultados"></p>
+        <!-- O JS preenche esta mensagem se nenhum projeto corresponder ao filtro escolhido -->
+
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Geferson Dev. Site criado para fins de estudo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

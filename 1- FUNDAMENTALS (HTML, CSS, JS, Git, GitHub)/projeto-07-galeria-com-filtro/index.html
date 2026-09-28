@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Galeria com Filtro</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos -->
+</head>
+
+<body>
+
+    <div class="container"> <!-- Container que centraliza e limita a largura de todo o conteúdo -->
+
+        <h1>Galeria de Fotos</h1> <!-- Título da página -->
+
+        <div class="filtros" id="filtros"> <!-- Div que agrupa os botões de filtro -->
+            <!-- "data-filtro" é um atributo customizado: guarda a categoria que aquele botão representa -->
+            <button class="botao-filtro ativo" data-filtro="todos">Todos</button>
+            <!-- Este botão já começa com a classe "ativo", pois é o filtro selecionado por padrão -->
+            <button class="botao-filtro" data-filtro="natureza">Natureza</button>
+            <button class="botao-filtro" data-filtro="cidade">Cidade</button>
+            <button class="botao-filtro" data-filtro="animais">Animais</button>
+        </div>
+
+        <div class="galeria" id="galeria"> <!-- Div que vai virar um grid com todas as imagens -->
+
+            <!-- Cada "figure" representa um item independente da galeria, com imagem e legenda -->
+            <!-- "data-categoria" é o atributo que o JS lê pra saber se deve mostrar ou esconder o item -->
+            <figure class="item-galeria" data-categoria="natureza">
+                <img src="imagens/natureza1.svg" alt="Montanhas ao pôr do sol">
+                <figcaption>Montanhas ao pôr do sol</figcaption> <!-- Legenda da imagem -->
+            </figure>
+
+            <figure class="item-galeria" data-categoria="cidade">
+                <img src="imagens/cidade1.svg" alt="Prédios da cidade">
+                <figcaption>Prédios da cidade</figcaption>
+            </figure>
+
+            <figure class="item-galeria" data-categoria="animais">
+                <img src="imagens/animal1.svg" alt="Gato dormindo">
+                <figcaption>Gato dormindo</figcaption>
+            </figure>
+
+            <figure class="item-galeria" data-categoria="natureza">
+                <img src="imagens/natureza2.svg" alt="Floresta verde">
+                <figcaption>Floresta verde</figcaption>
+            </figure>
+
+            <figure class="item-galeria" data-categoria="cidade">
+                <img src="imagens/cidade2.svg" alt="Ponte iluminada">
+                <figcaption>Ponte iluminada</figcaption>
+            </figure>
+
+            <figure class="item-galeria" data-categoria="animais">
+                <img src="imagens/animal2.svg" alt="Cachorro correndo">
+                <figcaption>Cachorro correndo</figcaption>
+            </figure>
+
+        </div>
+
+        <p class="sem-resultados" id="sem-resultados"></p>
+        <!-- Parágrafo vazio que o JS preenche caso nenhuma imagem corresponda ao filtro escolhido -->
+
+    </div>
+
+    <script src="script.js"></script> <!-- Importa o JS no final do body -->
+
+</body>
+</html>

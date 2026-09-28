@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Gerador de Conselhos</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos -->
+</head>
+
+<body>
+
+    <div class="caixa-app"> <!-- Caixa que centraliza e agrupa toda a aplicação -->
+
+        <h1>Conselho do Dia</h1> <!-- Título da página -->
+        <p class="subtitulo">Um conselho aleatório vindo direto de uma API pública.</p>
+
+        <div class="cartao-conselho"> <!-- Cartão onde o conselho aparece -->
+            <p id="texto-conselho" class="texto-conselho">
+                Clique no botão abaixo para buscar um conselho.
+            </p> <!-- Texto inicial exibido antes de qualquer busca -->
+        </div>
+
+        <p id="mensagem-erro" class="mensagem-erro"></p>
+        <!-- Parágrafo vazio que o JS preenche caso a busca na API falhe -->
+
+        <button id="botao-buscar" class="botao-buscar">Buscar novo conselho</button>
+        <!-- Botão que dispara a busca na API -->
+
+        <div class="historico"> <!-- Div que mostra os últimos conselhos já buscados nesta sessão -->
+            <h2>Histórico desta sessão</h2>
+            <ul id="lista-historico" class="lista-historico">
+                <!-- O JS vai preencher esta lista conforme novos conselhos forem chegando -->
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Importa o JS no final do body -->
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Lista de Tarefas Persistente</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos -->
+</head>
+
+<body>
+
+    <div class="caixa-app"> <!-- Caixa que centraliza e agrupa toda a aplicação -->
+
+        <h1>Minhas Tarefas</h1> <!-- Título da página -->
+        <p class="subtitulo">Seus dados ficam salvos mesmo se você recarregar a página.</p>
+        <!-- Frase explicando a diferença deste projeto: persistência dos dados -->
+
+        <div class="area-adicionar"> <!-- Div com o campo de texto e o botão de adicionar -->
+            <input type="text" id="input-tarefa" class="input-tarefa" placeholder="Digite uma nova tarefa...">
+            <button id="botao-adicionar" class="botao-adicionar">Adicionar</button>
+        </div>
+
+        <ul id="lista-tarefas" class="lista-tarefas">
+            <!-- Lista vazia: o JavaScript cria os "li" aqui, seja de tarefas novas ou carregadas do localStorage -->
+        </ul>
+
+        <div class="rodape-acoes"> <!-- Div que agrupa o contador e o botão de limpar tudo -->
+            <p id="contador-tarefas" class="contador-tarefas"></p>
+            <button id="botao-limpar" class="botao-limpar">Limpar concluídas</button>
+            <!-- Botão que remove do localStorage apenas as tarefas já marcadas como concluídas -->
+        </div>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Importa o JS no final do body -->
+
+</body>
+</html>

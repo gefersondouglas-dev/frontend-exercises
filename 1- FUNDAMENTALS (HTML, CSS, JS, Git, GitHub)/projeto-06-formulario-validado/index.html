@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Cadastro com Validação</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos -->
+</head>
+
+<body>
+
+    <div class="caixa-formulario"> <!-- Caixa que centraliza e agrupa o formulário -->
+
+        <h1>Criar Conta</h1> <!-- Título da página -->
+
+        <!-- "novalidate" desliga a validação automática do navegador, pois vamos validar tudo via JS -->
+        <form id="formulario-cadastro" novalidate>
+
+            <div class="campo"> <!-- Agrupa o label, o input e a mensagem de erro do nome -->
+                <label for="nome">Nome completo</label> <!-- "for" liga este texto ao input de id="nome" -->
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                <span class="erro" id="erro-nome"></span> <!-- Onde a mensagem de erro do nome vai aparecer -->
+            </div>
+
+            <div class="campo"> <!-- Agrupa o campo de e-mail -->
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="seuemail@exemplo.com">
+                <span class="erro" id="erro-email"></span>
+            </div>
+
+            <div class="campo"> <!-- Agrupa o campo de senha -->
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Mínimo 6 caracteres">
+                <!-- "type=password" faz o navegador esconder os caracteres digitados -->
+                <span class="erro" id="erro-senha"></span>
+            </div>
+
+            <div class="campo"> <!-- Agrupa o campo de confirmação de senha -->
+                <label for="confirmar-senha">Confirmar senha</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Repita a senha">
+                <span class="erro" id="erro-confirmar-senha"></span>
+            </div>
+
+            <button type="submit" class="botao-enviar" id="botao-enviar">Criar Conta</button>
+            <!-- "type=submit" faz este botão disparar o evento "submit" do formulário -->
+
+            <p class="mensagem-sucesso" id="mensagem-sucesso"></p>
+            <!-- Parágrafo vazio que o JS preenche quando o cadastro é validado com sucesso -->
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Importa o JS no final do body -->
+
+</body>
+</html>

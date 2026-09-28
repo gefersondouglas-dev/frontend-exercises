@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Geferson Dev - Contato</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao mesmo CSS compartilhado -->
+</head>
+
+<body>
+
+    <header class="cabecalho"> <!-- Mesmo cabeçalho das outras páginas -->
+        <div class="logo">Geferson Dev</div>
+        <nav class="navegacao">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html" class="ativo">Contato</a> <!-- Página atual marcada como ativa -->
+        </nav>
+    </header>
+
+    <section class="cabecalho-pagina">
+        <h1>Fale Comigo</h1>
+        <p>Preencha o formulário abaixo para enviar uma mensagem.</p>
+    </section>
+
+    <section class="secao-contato"> <!-- Seção principal com frase motivacional, formulário e mensagens salvas -->
+
+        <div class="cartao-frase"> <!-- Cartão que exibe uma frase buscada via API ao carregar a página -->
+            <p id="texto-frase" class="texto-frase">Carregando uma frase para te inspirar...</p>
+        </div>
+
+        <form id="formulario-contato" class="formulario-contato" novalidate>
+            <!-- "novalidate" desliga a validação automática do navegador, pois validamos tudo via JS -->
+
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                <span class="erro" id="erro-nome"></span>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="seuemail@exemplo.com">
+                <span class="erro" id="erro-email"></span>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem</label>
+                <!-- "textarea" é um campo de texto de várias linhas, ideal para mensagens mais longas -->
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+                <span class="erro" id="erro-mensagem"></span>
+            </div>
+
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+
+            <p class="mensagem-sucesso" id="mensagem-sucesso"></p>
+        </form>
+
+        <div class="mensagens-salvas"> <!-- Área que mostra as mensagens já enviadas, salvas no localStorage -->
+            <h2>Mensagens enviadas nesta sessão</h2>
+            <ul id="lista-mensagens" class="lista-mensagens">
+                <!-- O JS preenche esta lista com as mensagens guardadas no navegador -->
+            </ul>
+        </div>
+
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Geferson Dev. Site criado para fins de estudo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

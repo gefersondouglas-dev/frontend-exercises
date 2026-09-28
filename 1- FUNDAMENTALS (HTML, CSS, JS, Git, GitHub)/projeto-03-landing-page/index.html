@@ -1,0 +1,126 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página: português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Codificação de caracteres, permite acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade em celulares -->
+    <title>TaskFlow - Organize sua rotina</title> <!-- Título da aba do navegador -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonte importada do Google Fonts -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao CSS -->
+</head>
+
+<body>
+
+    <header class="cabecalho"> <!-- Cabeçalho fixo com logo e menu -->
+        <div class="logo">TaskFlow</div> <!-- Nome/logo do app em texto -->
+        <nav class="navegacao"> <!-- Menu de navegação -->
+            <a href="#funcionalidades">Funcionalidades</a> <!-- Link para seção de funcionalidades -->
+            <a href="#planos">Planos</a> <!-- Link para seção de planos -->
+            <a href="#depoimentos">Depoimentos</a> <!-- Link para seção de depoimentos -->
+        </nav>
+    </header>
+
+    <section class="hero"> <!-- Seção principal de destaque (primeira dobra da página) -->
+        <div class="hero-texto"> <!-- Bloco com título, subtítulo e botão -->
+            <h1>Organize suas tarefas sem esforço</h1> <!-- Título de impacto -->
+            <p>O TaskFlow ajuda você a planejar seu dia, sua semana e seus projetos em um só lugar.</p>
+            <a href="#planos" class="botao-cta">Começar Agora</a> <!-- Botão de call-to-action -->
+        </div>
+        <img src="imagens/hero.svg" alt="Ilustração de organização de tarefas" class="hero-imagem">
+        <!-- Imagem ilustrativa ao lado do texto -->
+    </section>
+
+    <section id="funcionalidades" class="funcionalidades"> <!-- Seção de funcionalidades, organizada em grid -->
+        <h2>Por que usar o TaskFlow?</h2> <!-- Título da seção -->
+
+        <div class="grid-funcionalidades"> <!-- Container que vai virar um grid no CSS -->
+
+            <article class="card-funcionalidade"> <!-- Cada card é um "article", pois representa um conteúdo independente -->
+                <img src="imagens/icone-lista.svg" alt="Ícone de lista" class="icone">
+                <h3>Listas Inteligentes</h3> <!-- Nome da funcionalidade -->
+                <p>Organize tarefas por prioridade, prazo ou projeto automaticamente.</p>
+            </article>
+
+            <article class="card-funcionalidade">
+                <img src="imagens/icone-calendario.svg" alt="Ícone de calendário" class="icone">
+                <h3>Calendário Integrado</h3>
+                <p>Veja seus compromissos e prazos em uma visão de calendário completa.</p>
+            </article>
+
+            <article class="card-funcionalidade">
+                <img src="imagens/icone-equipe.svg" alt="Ícone de equipe" class="icone">
+                <h3>Colaboração em Equipe</h3>
+                <p>Compartilhe projetos e acompanhe o progresso da sua equipe em tempo real.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="planos" class="planos"> <!-- Seção de planos de preço, também organizada em grid -->
+        <h2>Escolha seu plano</h2>
+
+        <div class="grid-planos"> <!-- Container que vira grid de 3 colunas no CSS -->
+
+            <article class="card-plano"> <!-- Plano gratuito -->
+                <h3>Grátis</h3>
+                <p class="preco-plano">R$ 0<span>/mês</span></p> <!-- "span" para estilizar só o "/mês" menor -->
+                <ul>
+                    <li>Até 10 tarefas</li>
+                    <li>1 projeto ativo</li>
+                    <li>Suporte por e-mail</li>
+                </ul>
+                <a href="#" class="botao-plano">Assinar</a>
+            </article>
+
+            <article class="card-plano destaque"> <!-- Plano do meio, com classe extra "destaque" para se sobressair -->
+                <h3>Pro</h3>
+                <p class="preco-plano">R$ 29<span>/mês</span></p>
+                <ul>
+                    <li>Tarefas ilimitadas</li>
+                    <li>10 projetos ativos</li>
+                    <li>Suporte prioritário</li>
+                </ul>
+                <a href="#" class="botao-plano">Assinar</a>
+            </article>
+
+            <article class="card-plano"> <!-- Plano empresarial -->
+                <h3>Empresas</h3>
+                <p class="preco-plano">R$ 79<span>/mês</span></p>
+                <ul>
+                    <li>Tudo do plano Pro</li>
+                    <li>Projetos ilimitados</li>
+                    <li>Gerente de conta dedicado</li>
+                </ul>
+                <a href="#" class="botao-plano">Assinar</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos"> <!-- Seção de depoimentos de clientes -->
+        <h2>Quem usa, recomenda</h2>
+
+        <div class="grid-depoimentos"> <!-- Grid responsivo com auto-fit para os depoimentos -->
+
+            <article class="card-depoimento">
+                <img src="imagens/avatar1.svg" alt="Foto de cliente" class="avatar">
+                <p class="texto-depoimento">"O TaskFlow mudou completamente como eu organizo meu trabalho."</p>
+                <span class="nome-cliente">- Marina Souza</span>
+            </article>
+
+            <article class="card-depoimento">
+                <img src="imagens/avatar2.svg" alt="Foto de cliente" class="avatar">
+                <p class="texto-depoimento">"Simples de usar e muito eficiente para gerenciar minha equipe."</p>
+                <span class="nome-cliente">- Rafael Lima</span>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="rodape"> <!-- Rodapé da página -->
+        <p>&copy; 2026 TaskFlow. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

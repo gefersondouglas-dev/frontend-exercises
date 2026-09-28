@@ -1,0 +1,112 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada na página inteira */
+    background-color: #f7f7f9; /* Fundo cinza bem claro */
+    padding: 40px 20px; /* Espaço nas bordas da página */
+}
+
+/* Container que centraliza e limita a largura do conteúdo */
+.container {
+    max-width: 900px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container horizontalmente na página */
+}
+
+/* Estiliza o título principal */
+.container h1 {
+    text-align: center; /* Centraliza o título */
+    color: #2d2d2d; /* Cor escura */
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    font-size: 24px; /* Tamanho do título */
+}
+
+/* Estiliza a div que agrupa os botões de filtro */
+.filtros {
+    display: flex; /* Coloca os botões lado a lado */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas pequenas */
+    gap: 10px; /* Espaço entre os botões */
+    margin-bottom: 30px; /* Espaço abaixo dos filtros, antes da galeria */
+}
+
+/* Estilo base de cada botão de filtro */
+.botao-filtro {
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #ddd; /* Borda cinza clara */
+    border-radius: 20px; /* Bordas bem arredondadas, formato de "pílula" */
+    padding: 8px 20px; /* Espaço interno do botão */
+    font-size: 13px; /* Tamanho da fonte */
+    font-weight: 600; /* Semi-negrito */
+    color: #555; /* Cor do texto */
+    cursor: pointer; /* Cursor de "mãozinha" */
+    transition: all 0.2s; /* Suaviza qualquer mudança de estilo (cor, borda, fundo) */
+}
+
+/* Estiliza o botão quando o mouse passa por cima */
+.botao-filtro:hover {
+    border-color: #4a90e2; /* Borda azul ao passar o mouse */
+    color: #4a90e2; /* Texto azul ao passar o mouse */
+}
+
+/* Classe "ativo", adicionada pelo JS ao botão do filtro selecionado no momento */
+.botao-filtro.ativo {
+    background-color: #4a90e2; /* Fundo azul sólido */
+    border-color: #4a90e2; /* Borda da mesma cor do fundo */
+    color: #fff; /* Texto branco, para contrastar */
+}
+
+/* Estiliza a galeria como um grid responsivo */
+.galeria {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas flexíveis com no mínimo 220px cada */
+    gap: 20px; /* Espaço entre os itens da galeria */
+}
+
+/* Estiliza cada item (figure) da galeria */
+.item-galeria {
+    background-color: #fff; /* Fundo branco de cada item */
+    border-radius: 12px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse as bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Sombra suave */
+    transition: transform 0.2s; /* Suaviza o efeito de "zoom" ao passar o mouse */
+}
+
+/* Efeito visual ao passar o mouse sobre um item da galeria */
+.item-galeria:hover {
+    transform: translateY(-4px); /* Levanta o item levemente, dando sensação de destaque */
+}
+
+/* Estiliza a imagem dentro de cada item */
+.item-galeria img {
+    width: 100%; /* Imagem ocupa toda a largura do item */
+    height: 160px; /* Altura fixa, pra manter todos os itens do mesmo tamanho */
+    object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
+    display: block; /* Remove um pequeno espaço extra que imagens têm por padrão (comportamento inline) */
+}
+
+/* Estiliza a legenda de cada imagem */
+.item-galeria figcaption {
+    padding: 12px; /* Espaço interno da legenda */
+    font-size: 13px; /* Tamanho da fonte da legenda */
+    color: #444; /* Cor do texto */
+    text-align: center; /* Centraliza o texto da legenda */
+}
+
+/* Classe que o JS adiciona para ESCONDER um item que não corresponde ao filtro escolhido */
+.item-galeria.escondido {
+    display: none; /* Remove completamente o elemento da tela (não ocupa espaço) */
+}
+
+/* Estiliza a mensagem exibida quando nenhum item corresponde ao filtro */
+.sem-resultados {
+    text-align: center; /* Centraliza o texto */
+    color: #888; /* Cor cinza suave */
+    margin-top: 30px; /* Espaço acima da mensagem */
+    font-size: 14px; /* Tamanho da fonte */
+}

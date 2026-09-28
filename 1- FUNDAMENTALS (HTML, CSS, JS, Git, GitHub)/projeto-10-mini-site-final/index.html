@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Geferson Dev - Início</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos (compartilhado entre as páginas) -->
+</head>
+
+<body>
+
+    <header class="cabecalho"> <!-- Cabeçalho compartilhado por todas as páginas do site -->
+        <div class="logo">Geferson Dev</div> <!-- Nome/marca do site -->
+        <nav class="navegacao"> <!-- Menu de navegação entre as páginas -->
+            <!-- "class=ativo" marca visualmente em qual página o usuário está agora -->
+            <a href="index.html" class="ativo">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero"> <!-- Seção de destaque no topo da página inicial -->
+        <img src="imagens/avatar.svg" alt="Foto de perfil" class="avatar-hero">
+        <h1>Olá, eu sou o Geferson</h1> <!-- Título de apresentação -->
+        <p>Desenvolvedor front-end aprendendo e praticando HTML, CSS e JavaScript.</p>
+        <a href="projetos.html" class="botao-cta">Ver meus projetos</a> <!-- Chama para a página de projetos -->
+    </section>
+
+    <section class="sobre"> <!-- Seção "sobre mim" -->
+        <h2>Sobre mim</h2>
+        <p>
+            Estou construindo minha base como desenvolvedor, projeto após projeto.
+            Este site é, na verdade, o meu projeto final de estudos: ele reúne tudo que
+            aprendi até aqui, desde HTML semântico até consumo de APIs.
+        </p>
+    </section>
+
+    <section class="habilidades"> <!-- Seção de habilidades, organizada em grid -->
+        <h2>O que eu já sei praticar</h2>
+
+        <div class="grid-habilidades"> <!-- Container que vira um grid no CSS -->
+            <article class="card-habilidade">
+                <img src="imagens/icone-html.svg" alt="Ícone HTML" class="icone-habilidade">
+                <h3>HTML Semântico</h3>
+                <p>Estrutura de páginas com significado, acessibilidade e boas práticas.</p>
+            </article>
+
+            <article class="card-habilidade">
+                <img src="imagens/icone-css.svg" alt="Ícone CSS" class="icone-habilidade">
+                <h3>CSS (Flexbox e Grid)</h3>
+                <p>Layouts responsivos, alinhamentos e componentes visuais bonitos.</p>
+            </article>
+
+            <article class="card-habilidade">
+                <img src="imagens/icone-js.svg" alt="Ícone JavaScript" class="icone-habilidade">
+                <h3>JavaScript</h3>
+                <p>Manipulação do DOM, eventos, formulários, localStorage e APIs.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer class="rodape"> <!-- Rodapé compartilhado por todas as páginas -->
+        <p>&copy; 2026 Geferson Dev. Site criado para fins de estudo.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Importa o JS compartilhado no final do body -->
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* Reset básico aplicado a todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Padding e borda entram no cálculo do tamanho do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada na página inteira */
+    background-color: #f4f5f7; /* Fundo cinza claro */
+    display: flex; /* Flexbox para centralizar a caixa do formulário */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 50px 20px; /* Espaço no topo e nas laterais em telas pequenas */
+}
+
+/* Estiliza a caixa branca que contém o formulário */
+.caixa-formulario {
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 14px; /* Bordas arredondadas */
+    padding: 35px; /* Espaço interno */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 400px; /* Mas nunca ultrapassa 400px */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* Sombra suave */
+}
+
+/* Estiliza o título */
+.caixa-formulario h1 {
+    font-size: 20px; /* Tamanho do título */
+    color: #2d2d2d; /* Cor escura */
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estiliza a div que agrupa cada campo (label + input + erro) */
+.campo {
+    margin-bottom: 18px; /* Espaço entre um campo e o próximo */
+    display: flex; /* Flexbox para empilhar label, input e erro em coluna */
+    flex-direction: column; /* Organiza de cima para baixo */
+}
+
+/* Estiliza os rótulos (labels) de cada campo */
+.campo label {
+    font-size: 13px; /* Tamanho pequeno de fonte */
+    color: #555; /* Cor cinza escura */
+    margin-bottom: 6px; /* Espaço entre o label e o input */
+    font-weight: 600; /* Semi-negrito */
+}
+
+/* Estiliza todos os inputs de texto e senha */
+.campo input {
+    padding: 10px 12px; /* Espaço interno do campo */
+    border: 1px solid #ddd; /* Borda cinza clara padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte digitada */
+    transition: border-color 0.2s; /* Suaviza a troca de cor da borda */
+}
+
+/* Estiliza o input quando está em foco (usuário clicou nele) */
+.campo input:focus {
+    outline: none; /* Remove o contorno azul padrão do navegador */
+    border-color: #4a90e2; /* Borda azul, indicando foco */
+}
+
+/* Classe adicionada pelo JS quando o campo tem um valor inválido */
+.campo input.invalido {
+    border-color: #e74c3c; /* Borda vermelha, indicando erro */
+}
+
+/* Classe adicionada pelo JS quando o campo tem um valor válido */
+.campo input.valido {
+    border-color: #2ecc71; /* Borda verde, indicando que está correto */
+}
+
+/* Estiliza a mensagem de erro abaixo de cada campo */
+.erro {
+    font-size: 12px; /* Tamanho pequeno de fonte */
+    color: #e74c3c; /* Cor vermelha, combinando com erro */
+    margin-top: 4px; /* Pequeno espaço acima da mensagem */
+    min-height: 14px; /* Reserva espaço mesmo vazio, evitando "pulos" no layout */
+}
+
+/* Estiliza o botão de enviar o formulário */
+.botao-enviar {
+    width: 100%; /* Ocupa toda a largura disponível do formulário */
+    background-color: #4a90e2; /* Cor de fundo azul */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px; /* Espaço interno do botão */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de "mãozinha" */
+    margin-top: 10px; /* Espaço acima do botão */
+    transition: background-color 0.2s; /* Suaviza a troca de cor no hover */
+}
+
+/* Efeito visual ao passar o mouse sobre o botão de enviar */
+.botao-enviar:hover {
+    background-color: #357abd; /* Azul mais escuro */
+}
+
+/* Estiliza a mensagem de sucesso exibida após o envio válido */
+.mensagem-sucesso {
+    text-align: center; /* Centraliza o texto */
+    color: #2ecc71; /* Cor verde, indicando sucesso */
+    font-size: 13px; /* Tamanho pequeno de fonte */
+    margin-top: 15px; /* Espaço acima da mensagem */
+    font-weight: 600; /* Semi-negrito */
+}

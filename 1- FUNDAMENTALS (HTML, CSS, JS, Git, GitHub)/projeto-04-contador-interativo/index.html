@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Contador Interativo</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos -->
+</head>
+
+<body>
+
+    <div class="caixa-contador"> <!-- Caixa que centraliza e agrupa o contador -->
+
+        <h1>Contador Interativo</h1> <!-- Título da página -->
+
+        <p id="numero" class="numero">0</p>
+        <!-- Elemento que mostra o valor atual do contador. "id=numero" é como o JS vai encontrar esse elemento -->
+
+        <div class="botoes"> <!-- Div que agrupa os 3 botões lado a lado -->
+            <button id="botao-diminuir" class="botao botao-diminuir">-</button>
+            <!-- Botão de diminuir. O "id" é usado pelo JS pra saber qual botão foi clicado -->
+            <button id="botao-resetar" class="botao botao-resetar">Resetar</button>
+            <!-- Botão de resetar o valor para zero -->
+            <button id="botao-aumentar" class="botao botao-aumentar">+</button>
+            <!-- Botão de aumentar -->
+        </div>
+
+        <div class="config-passo"> <!-- Div com a configuração de quanto o contador aumenta/diminui por clique -->
+            <label for="input-passo">Passo:</label> <!-- Rótulo do campo, "for" liga ao id do input -->
+            <input type="number" id="input-passo" class="input-passo" value="1" min="1">
+            <!-- Campo numérico onde o usuário escolhe de quanto em quanto o contador anda -->
+        </div>
+
+        <p id="mensagem" class="mensagem"></p>
+        <!-- Parágrafo vazio que o JS vai preencher dinamicamente com mensagens (ex: "Valor positivo!") -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Importa o arquivo JavaScript. Fica no fim do body pra garantir que o HTML já carregou antes do JS rodar -->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Declara documento HTML5 -->
+<html lang="pt-br"> <!-- Idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para celular -->
+    <title>Lista de Tarefas</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Liga o HTML ao arquivo de estilos -->
+</head>
+
+<body>
+
+    <div class="caixa-app"> <!-- Caixa que centraliza e agrupa toda a aplicação -->
+
+        <h1>Minhas Tarefas</h1> <!-- Título da página -->
+
+        <div class="area-adicionar"> <!-- Div com o campo de texto e o botão de adicionar -->
+            <input type="text" id="input-tarefa" class="input-tarefa" placeholder="Digite uma nova tarefa...">
+            <!-- Campo onde o usuário digita a tarefa. "placeholder" é o texto de dica exibido vazio -->
+            <button id="botao-adicionar" class="botao-adicionar">Adicionar</button>
+            <!-- Botão que vai disparar a função de adicionar tarefa no JS -->
+        </div>
+
+        <ul id="lista-tarefas" class="lista-tarefas">
+            <!-- Lista vazia de propósito: o JavaScript é quem vai criar os "li" aqui dentro dinamicamente -->
+        </ul>
+
+        <p id="contador-tarefas" class="contador-tarefas"></p>
+        <!-- Parágrafo que o JS vai preencher com "Você tem X tarefas pendentes" -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Importa o JS no final do body, garantindo que todo o HTML já foi carregado antes -->
+
+</body>
+</html>
